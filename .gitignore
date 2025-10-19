@@ -1,0 +1,36 @@
+# =============================
+# Code Composer Studio (CCS)
+# =============================
+
+# Build directories
+/Debug/
+/Release/
+/workspace/
+
+# Temporary files
+*.tmp
+*.log
+*.bak
+*.swp
+
+# Settings and metadata
+/.settings/
+/.metadata/
+/.project
+/.cproject
+
+# Local system files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.old
+*.orig
+*.save
+
+# Git itself
+.gitignore
+
+# =============================
+# End of file
+# =============================
