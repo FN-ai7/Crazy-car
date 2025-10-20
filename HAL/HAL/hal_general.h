@@ -9,8 +9,8 @@
 #ifndef HAL_HAL_GENERAL_H_
 #define HAL_HAL_GENERAL_H_
 
-#include <HAL/hal_gpio.h>
+
 
 void hal_Init(void);
 
-#endif /* HAL_HAL_GENERAL_H_ */
+#endif

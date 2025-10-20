@@ -9,12 +9,12 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./main.obj" \
-"./HAL/hal_general.obj" \
-"./HAL/hal_gpio.obj" \
-"./HAL/hal_pmm.obj" \
-"./HAL/hal_timerB0.obj" \
-"./HAL/hal_ucs.obj" \
-"./HAL/hal_wdt.obj" \
+"./HAL/HAL/hal_general.obj" \
+"./HAL/HAL/hal_gpio.obj" \
+"./HAL/HAL/hal_pmm.obj" \
+"./HAL/HAL/hal_timerB0.obj" \
+"./HAL/HAL/hal_ucs.obj" \
+"./HAL/HAL/hal_wdt.obj" \
 "../lnk_msp430f5335.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibmath.a \
@@ -28,9 +28,9 @@ RMDIR := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
--include HAL/subdir_vars.mk
+-include HAL/HAL/subdir_vars.mk
 -include subdir_rules.mk
--include HAL/subdir_rules.mk
+-include HAL/HAL/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -148,8 +148,8 @@ Crazy\ Car.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "HAL/hal_general.obj" "HAL/hal_gpio.obj" "HAL/hal_pmm.obj" "HAL/hal_timerB0.obj" "HAL/hal_ucs.obj" "HAL/hal_wdt.obj" 
-	-$(RM) "main.d" "HAL/hal_general.d" "HAL/hal_gpio.d" "HAL/hal_pmm.d" "HAL/hal_timerB0.d" "HAL/hal_ucs.d" "HAL/hal_wdt.d" 
+	-$(RM) "main.obj" "HAL/HAL/hal_general.obj" "HAL/HAL/hal_gpio.obj" "HAL/HAL/hal_pmm.obj" "HAL/HAL/hal_timerB0.obj" "HAL/HAL/hal_ucs.obj" "HAL/HAL/hal_wdt.obj" 
+	-$(RM) "main.d" "HAL/HAL/hal_general.d" "HAL/HAL/hal_gpio.d" "HAL/HAL/hal_pmm.d" "HAL/HAL/hal_timerB0.d" "HAL/HAL/hal_ucs.d" "HAL/HAL/hal_wdt.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

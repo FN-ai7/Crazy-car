@@ -35,3 +35,4 @@ void hal_Init(void)
    // Globale Interrupts aktivieren
    __enable_interrupt();
 }
+

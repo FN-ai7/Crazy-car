@@ -10,4 +10,4 @@
 
 void hal_WdtInit(void);
 
-#endif /* HAL_HAL_WDT_H_ */
+#endif
